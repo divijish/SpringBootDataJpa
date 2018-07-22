@@ -1,4 +1,4 @@
-package io.springboot.SpringBootDataJpa.start;
+package io.springboot.SpringBootDataJpa.topic;
 
 import org.springframework.data.repository.CrudRepository;
 

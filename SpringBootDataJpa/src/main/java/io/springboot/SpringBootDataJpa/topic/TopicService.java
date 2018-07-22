@@ -1,4 +1,4 @@
-package io.springboot.SpringBootDataJpa.start;
+package io.springboot.SpringBootDataJpa.topic;
 
 import java.util.List;
 import java.util.Optional;

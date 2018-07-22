@@ -1,8 +1,11 @@
-package io.springboot.SpringBootDataJpa.start;
+package io.springboot.SpringBootDataJpa.topic;
+
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import io.springboot.SpringBootDataJpa.course.Course;
+import javax.persistence.OneToMany;
 @Entity
 public class Topic {
 
@@ -10,8 +13,19 @@ public class Topic {
 	private int id;
 	private String name;
 	private String description;
+	
+/*	@OneToMany
+	private List<Course> courses;
+	*/
+/*	public List<Course> getCourses() {
+		return courses;
+	}
 
-	protected Topic() {
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
+
+*/	protected Topic() {
 
 	}
 

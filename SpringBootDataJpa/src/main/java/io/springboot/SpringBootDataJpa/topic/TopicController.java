@@ -1,4 +1,4 @@
-package io.springboot.SpringBootDataJpa.start;
+package io.springboot.SpringBootDataJpa.topic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class HelloController {
+public class TopicController {
 
 	@Autowired
 	TopicService topicService;
