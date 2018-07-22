@@ -13,11 +13,10 @@ public class Topic {
 	private int id;
 	private String name;
 	private String description;
-	
-/*	@OneToMany
+	@OneToMany 			//Jpa has made this redundant.
 	private List<Course> courses;
-	*/
-/*	public List<Course> getCourses() {
+
+	public List<Course> getCourses() {
 		return courses;
 	}
 
@@ -25,7 +24,7 @@ public class Topic {
 		this.courses = courses;
 	}
 
-*/	protected Topic() {
+	protected Topic() {
 
 	}
 
@@ -53,6 +52,10 @@ public class Topic {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public void setCourse(Course course) {
+		courses.add(course);
 	}
 
 }

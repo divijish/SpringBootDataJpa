@@ -8,12 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.springboot.SpringBootDataJpa.topic.Topic;
+import io.springboot.SpringBootDataJpa.topic.TopicRepository;
 
 @Service
 public class CourseService {
 
 	@Autowired
 	CourseRepository courseRepository;
+	@Autowired
+	TopicRepository topicRepository;
 	
 	public List<Course> getAllCourses(int topicId) 
 	{
@@ -24,6 +27,8 @@ public class CourseService {
 	
 	public void saveCourse(int topicId, Course course) 
 	{
+		Topic topic = topicRepository.findById(topicId).get();
+		topic.setCourse(course);
 		course.setTopic(new Topic(topicId, "", ""));
 		courseRepository.save(course);
 	}

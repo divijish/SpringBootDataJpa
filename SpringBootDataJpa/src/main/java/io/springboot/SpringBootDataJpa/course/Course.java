@@ -2,6 +2,9 @@ package io.springboot.SpringBootDataJpa.course;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Id;
 
 import io.springboot.SpringBootDataJpa.topic.Topic;
@@ -13,6 +16,8 @@ public class Course {
 	private int id;
 	private String name;
 	private String description;
+
+	@JsonIgnore	//If not used then jaxrs will go in infinite loop of objects from topic to course and course to topic.
 	@ManyToOne
 	private Topic topic;
 
